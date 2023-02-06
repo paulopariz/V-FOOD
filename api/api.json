@@ -79,29 +79,6 @@
   ],
   "burgers": [
     {
-      "nome": "Paulo",
-      "carne": "Picanha",
-      "pao": "3 Queijos",
-      "opcionais": [
-        "Bacon",
-        "Cebola roxa",
-        "Tomate"
-      ],
-      "status": "Solicitado",
-      "id": 1
-    },
-    {
-      "nome": "Paulo",
-      "carne": "Maminha",
-      "pao": "Italiano Branco",
-      "opcionais": [
-        "Salame",
-        "Cebola roxa"
-      ],
-      "status": "Solicitado",
-      "id": 2
-    },
-    {
       "nome": "Paulo Santos ",
       "carne": "Veggie burger",
       "pao": "Integral",
