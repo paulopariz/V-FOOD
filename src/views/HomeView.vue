@@ -1,15 +1,9 @@
 <template>
-  <div class="home">
-    <h1>FORMULARIO</h1>
-    <FoodForm />
-  </div>
+  <div class="home"></div>
 </template>
 
 <script>
-import FoodForm from "@/components/FoodForm.vue";
-export default {
-  components: { FoodForm },
-};
+export default {};
 </script>
 
 <style></style>

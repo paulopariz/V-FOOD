@@ -1,16 +1,24 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import RequestsView from '../views/RequestsView.vue'
+import PlaceOrdersView from '../views/PlaceOrdersView'
 
 const routes = [
   {
     path: '/',
-    name: 'home',
+    name: 'inicio',
     component: HomeView
   },
+
   {
-    path: '/requests',
-    name: 'requests',
+    path: '/fazer-pedido',
+    name: 'fazer-pedido',
+    component: PlaceOrdersView
+  },
+
+  {
+    path: '/pedidos',
+    name: 'pedidos',
     component: RequestsView
   }
 ]

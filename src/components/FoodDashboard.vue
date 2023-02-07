@@ -24,7 +24,11 @@
           </ul>
         </div>
         <div>
-          <select name="status" class="status" @change="updatedBurger($event, burger.id)">
+          <select
+            name="status"
+            class="status text-black"
+            @change="updatedBurger($event, burger.id)"
+          >
             <option value="">Selecione o status</option>
             <option
               v-for="s in status"

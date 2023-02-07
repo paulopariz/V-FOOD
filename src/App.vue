@@ -17,7 +17,7 @@ export default {
 
 <style>
 body {
-  background: #111;
-  color: white;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
 }
 </style>
