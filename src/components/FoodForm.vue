@@ -131,7 +131,7 @@ form {
 label {
   font-weight: bold;
   margin-bottom: 15px;
-  color: #fff;
+  color: #000;
   padding: 5px 10px;
   border-left: 4px solid #fcba03;
 }

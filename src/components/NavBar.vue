@@ -4,18 +4,17 @@
       <img :src="logo" />
       <h1 class="font-bold">V-FOOD</h1>
     </div>
-    <div class="flex items-center gap-16">
+    <div class="flex items-center gap-16 font-medium">
       <router-link to="/">Início</router-link>
 
       <router-link to="/fazer-pedido">Fazer Pedido</router-link>
       <router-link
         to="/pedidos"
-        class="py-4 pl-4 pr-8 rounded-full flex gap-3 items-center bg-darkSecondary"
+        class="py-4 px-8 rounded-full flex gap-3 items-center bg-base-200"
       >
-        <img :src="cart" />
-        <span>Carrinho</span>
+        <span>Meus Pedidos</span>
         <div
-          class="bg-grennOne font-semibold text-xs w-4 h-4 flex items-center justify-center p-2.5 rounded-full -mt-12 ml-28 absolute"
+          class="bg-grennOne text-white font-semibold text-xs w-4 h-4 flex items-center justify-center p-2.5 rounded-full -mt-12 ml-28 absolute"
         >
           2
         </div>
@@ -36,5 +35,3 @@ export default {
   },
 };
 </script>
-
-<style></style>

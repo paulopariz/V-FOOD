@@ -1,9 +1,14 @@
 <template>
-  <div class="home"></div>
+  <div class="home">
+    <FoodBanner />
+  </div>
 </template>
 
 <script>
-export default {};
+import FoodBanner from "@/components/FoodBanner.vue";
+export default {
+  components: { FoodBanner },
+};
 </script>
 
 <style></style>
