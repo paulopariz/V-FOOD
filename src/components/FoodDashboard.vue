@@ -1,45 +1,75 @@
 <template>
-  <div>
-    <div>
-      <div id="burger-table-heading">
-        <div class="order-id">#:</div>
-        <div>Cliente:</div>
-        <div>Pão:</div>
-        <div>Carne:</div>
-        <div>Opcionais:</div>
-        <div>Ações:</div>
-      </div>
-    </div>
-    <div id="burger-table-rows">
-      <div class="burger-table-row" v-for="burger in burgers" :key="burger.id">
-        <div class="order-number">{{ burger.id }}</div>
-        <div>{{ burger.nome }}</div>
-        <div>{{ burger.pao }}</div>
-        <div>{{ burger.carne }}</div>
+  <div class="container mt-12 grid">
+    <div class="">
+      <div
+        class="flex items-center gap-14 border-2 mt-8 rounded-3xl"
+        v-for="burger in burgers"
+        :key="burger.id"
+      >
         <div>
-          <ul>
-            <li v-for="(opcional, index) in burger.opcionais" :key="index">
-              {{ opcional }}
-            </li>
-          </ul>
+          <img class="w-36 bg-grennTwo rounded-3xl" src="../assets/img/Balloon.svg" />
         </div>
-        <div>
-          <select
-            name="status"
-            class="status text-black"
-            @change="updatedBurger($event, burger.id)"
-          >
-            <option value="">Selecione o status</option>
-            <option
-              v-for="s in status"
-              :key="s.id"
-              :value="s.tipo"
-              :selected="burger.status == s.tipo"
+
+        <span
+          class="bg-grennOne text-white text-xs font-semibold border-2 border-grennThree p-1 w-6 h-6 flex items-center justify-center rounded-full"
+          >{{ burger.id }}</span
+        >
+
+        <div class="flex justify-between items-center gap-14">
+          <div class="w-44">
+            <span class="font-semibold">Nome: </span>
+            <h1 class="text-sm">{{ burger.nome }} {{ burger.sobrenome }}</h1>
+          </div>
+
+          <div class="w-44">
+            <span class="font-semibold">Pão: </span>
+            <h1 class="text-sm">{{ burger.pao }}</h1>
+          </div>
+          <div class="w-44">
+            <span class="font-semibold">Carne: </span>
+            <h1 class="text-sm">{{ burger.carne }}</h1>
+          </div>
+          <div class="w-44">
+            <div class="dropdown dropdown-right dropdown-end">
+              <label
+                tabindex="0"
+                class="btn m-1 btn-sm text-xs bg-grennTwo hover:bg-grennOne"
+                >Opcionais</label
+              >
+              <ul
+                tabindex="0"
+                class="dropdown-content menu p-2 shadow bg-base-300 rounded-box w-52"
+              >
+                <li
+                  v-for="(opcional, index) in burger.opcionais"
+                  :key="index"
+                  class="font-semibold p-1"
+                >
+                  {{ opcional }}
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <select
+              name="status"
+              class="status text-black hidden"
+              @change="updatedBurger($event, burger.id)"
             >
-              {{ s.tipo }}
-            </option>
-          </select>
-          <button class="delete-btn" @click="deleteBurger(burger.id)">Cancelar</button>
+              <option value="">Selecione o status</option>
+              <option
+                v-for="s in status"
+                :key="s.id"
+                :value="s.tipo"
+                :selected="burger.status == s.tipo"
+              >
+                {{ s.tipo }}
+              </option>
+            </select>
+          </div>
+          <button class="btn w-0 h-full hidden" @click="deleteBurger(burger.id)">
+            Cancelar
+          </button>
         </div>
       </div>
     </div>
@@ -111,54 +141,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-#burger-table {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-#burger-table-heading,
-#burger-table-rows,
-.burger-table-row {
-  display: flex;
-  flex-wrap: wrap;
-}
-#burger-table-heading {
-  font-weight: bold;
-  padding: 12px;
-  border-bottom: 3px solid #333;
-}
-.burger-table-row {
-  width: 100%;
-  padding: 12px;
-  border-bottom: 1px solid #ccc;
-}
-#burger-table-heading div,
-.burger-table-row div {
-  width: 19%;
-}
-#burger-table-heading .order-id,
-.burger-table-row .order-number {
-  width: 5%;
-}
-select {
-  padding: 12px 6px;
-  margin-right: 12px;
-}
-.delete-btn {
-  background-color: #222;
-  color: #fcba03;
-  font-weight: bold;
-  border: 2px solid #222;
-  padding: 10px;
-  font-size: 16px;
-  margin: 0 auto;
-  cursor: pointer;
-  transition: 0.5s;
-}
-
-.delete-btn:hover {
-  background-color: transparent;
-  color: #222;
-}
-</style>

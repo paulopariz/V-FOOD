@@ -3,27 +3,23 @@
     "paes": [
       {
         "id": 1,
-        "tipo": "Pão de Hambúrguer"
+        "tipo": "Pão de Brioche"
       },
       {
         "id": 2,
-        "tipo": "Pão de Hambúrguer com gergelim"
+        "tipo": "Pão com gergelim"
       },
       {
         "id": 3,
-        "tipo": "Pão de Hambúrguer Australiano"
+        "tipo": "Pão Australiano"
       },
       {
         "id": 4,
-        "tipo": "Pão de Hambúrguer integral"
+        "tipo": "Pão integral"
       },
       {
         "id": 4,
-        "tipo": "Pão de Hambúrguer Crocante"
-      },
-      {
-        "id": 4,
-        "tipo": "Pão de Brioche"
+        "tipo": "Pão Crocante"
       }
     ],
     "carnes": [
@@ -138,6 +134,46 @@
       ],
       "status": "Solicitado",
       "id": 4
+    },
+    {
+      "nome": "Paulo",
+      "sobrenome": "Pariz",
+      "carne": "Picanha",
+      "pao": "Pão de Hambúrguer integral",
+      "opcionais": [
+        "Ovo",
+        "Alface",
+        "Tomate",
+        "Batata Frita"
+      ],
+      "status": "Solicitado",
+      "id": 5
+    },
+    {
+      "nome": "Paulo",
+      "sobrenome": "Paulo",
+      "carne": "Acém",
+      "pao": "Pão de Brioche",
+      "opcionais": [
+        "Ovo",
+        "Alface"
+      ],
+      "status": "Solicitado",
+      "id": 6
+    },
+    {
+      "nome": "Paulo",
+      "sobrenome": " Santos Pariz ",
+      "carne": "Contrafilé",
+      "pao": "Pão de Brioche",
+      "opcionais": [
+        "Cebola",
+        "Cheddar",
+        "Alface",
+        "Tomate"
+      ],
+      "status": "Solicitado",
+      "id": 7
     }
   ]
 }

@@ -1,8 +1,7 @@
 <template>
-  <div class="container mt-20 mb-20">
-    <h1 class="text-center mb-5 text-3xl font-semibold">Monte seu Hamburger</h1>
+  <div class="container mt-5 mb-20">
     <form @submit="createFood" class="max-w-3xl m-auto bg-base-200 py-10 px-14">
-      <div class="p-7 rounded-3xl flex justify-center flex-col">
+      <div class="p-2 rounded-3xl flex justify-center flex-col">
         <div class="flex justify-center flex-col">
           <label for="name" class="font-semibold">Nome</label>
           <input
@@ -18,15 +17,14 @@
           <label for="name" class="font-semibold">Sobrenome</label>
           <input
             type="text"
-            id="nome"
             name="nome"
             class="bg-transparent outline-none p-3 border-b-2 border-b-base-300"
-            v-model="nome"
+            v-model="sobrenome"
             placeholder="Digite seu nome"
           />
         </div>
       </div>
-      <div class="p-7 rounded-3xl flex justify-center flex-col mt-4">
+      <div class="p-2 rounded-3xl flex justify-center flex-col mt-4">
         <label for="pao" class="font-semibold mb-2">Pão:</label>
         <select name="pao" class="select w-full" v-model="pao">
           <option disabled selected>Selecione o tipo de pão</option>
@@ -35,7 +33,7 @@
           </option>
         </select>
       </div>
-      <div class="p-7 rounded-3xl flex justify-center flex-col mt-4">
+      <div class="p-2 rounded-3xl flex justify-center flex-col mt-4">
         <label for="carne" class="font-semibold mb-2">Carne:</label>
         <select name="carne" class="select w-full" v-model="carne">
           <option disabled selected>Selecione sua carne</option>
@@ -46,7 +44,7 @@
       </div>
       <div
         id="opcionais-container"
-        class="p-7 rounded-3xl flex justify-center flex-col mt-4"
+        class="p-2 rounded-3xl flex justify-center flex-col mt-2"
       >
         <label for="opcionais" class="font-semibold mb-2">Opcionais:</label>
         <div class="grid grid-cols-3 gap-8">
@@ -93,6 +91,7 @@ export default {
 
       // DADOS DO FORMULARIO(v-model)
       nome: null,
+      sobrenome: null,
       pao: null,
       carne: null,
       opcionais: [],
@@ -117,6 +116,7 @@ export default {
 
       const data = {
         nome: this.nome,
+        sobrenome: this.sobrenome,
         carne: this.carne,
         pao: this.pao,
         opcionais: Array.from(this.opcionais),
@@ -135,7 +135,11 @@ export default {
 
       console.log(res);
 
-      (this.nome = ""), (this.carne = ""), (this.pao = ""), (this.opcionais = "");
+      (this.nome = ""),
+        (this.sobrenome = ""),
+        (this.carne = ""),
+        (this.pao = ""),
+        (this.opcionais = "");
     },
   },
 
