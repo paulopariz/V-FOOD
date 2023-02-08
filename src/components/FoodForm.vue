@@ -1,52 +1,79 @@
 <template>
-  <div>
-    <form @submit="createFood">
-      <div class="input-container">
-        <label for="name">Nome</label>
-        <input
-          type="text"
-          id="nome"
-          name="nome"
-          v-model="nome"
-          placeholder="Digite seu nome"
-        />
+  <div class="container mt-20 mb-20">
+    <h1 class="text-center mb-5 text-3xl font-semibold">Monte seu Hamburger</h1>
+    <form @submit="createFood" class="max-w-3xl m-auto bg-base-200 py-10 px-14">
+      <div class="p-7 rounded-3xl flex justify-center flex-col">
+        <div class="flex justify-center flex-col">
+          <label for="name" class="font-semibold">Nome</label>
+          <input
+            type="text"
+            name="nome"
+            class="bg-transparent outline-none p-3 border-b-2 border-b-base-300"
+            v-model="nome"
+            placeholder="Digite seu nome"
+          />
+        </div>
+
+        <div class="flex justify-center flex-col mt-6">
+          <label for="name" class="font-semibold">Sobrenome</label>
+          <input
+            type="text"
+            id="nome"
+            name="nome"
+            class="bg-transparent outline-none p-3 border-b-2 border-b-base-300"
+            v-model="nome"
+            placeholder="Digite seu nome"
+          />
+        </div>
       </div>
-      <div class="input-container">
-        <label for="pao">Pao</label>
-        <select name="pao" id="pao" v-model="pao">
-          <option value="">Selecione seu pao</option>
+      <div class="p-7 rounded-3xl flex justify-center flex-col mt-4">
+        <label for="pao" class="font-semibold mb-2">Pão:</label>
+        <select name="pao" class="select w-full" v-model="pao">
+          <option disabled selected>Selecione o tipo de pão</option>
           <option v-for="pao in paes" :key="pao.id" :value="pao.tipo">
             {{ pao.tipo }}
           </option>
         </select>
       </div>
-      <div class="input-container">
-        <label for="carne">Carne</label>
-        <select name="carne" id="carne" v-model="carne">
-          <option value="">Selecione sua carne</option>
+      <div class="p-7 rounded-3xl flex justify-center flex-col mt-4">
+        <label for="carne" class="font-semibold mb-2">Carne:</label>
+        <select name="carne" class="select w-full" v-model="carne">
+          <option disabled selected>Selecione sua carne</option>
           <option v-for="carne in carnes" :key="carne.id" :value="carne.tipo">
             {{ carne.tipo }}
           </option>
         </select>
       </div>
-      <div id="opcionais-container" class="input-container">
-        <label id="opcionais-title" for="opcionais">Selecione os opcionais:</label>
-        <div
-          class="checkbox-container"
-          v-for="opcional in opcionaisdata"
-          :key="opcional.id"
-        >
-          <input
-            type="checkbox"
-            name="opcionais"
-            v-model="opcionais"
-            :value="opcional.tipo"
-          />
-          <span>{{ opcional.tipo }}</span>
+      <div
+        id="opcionais-container"
+        class="p-7 rounded-3xl flex justify-center flex-col mt-4"
+      >
+        <label for="opcionais" class="font-semibold mb-2">Opcionais:</label>
+        <div class="grid grid-cols-3 gap-8">
+          <div
+            class="flex items-center gap-3"
+            v-for="opcional in opcionaisdata"
+            :key="opcional.id"
+          >
+            <input
+              type="checkbox"
+              name="opcionais"
+              checked="checked"
+              class="checkbox"
+              v-model="opcionais"
+              :value="opcional.tipo"
+            />
+            <span class="text-sm">{{ opcional.tipo }}</span>
+          </div>
         </div>
       </div>
-      <div class="input-container">
-        <input type="submit" name="submit-btn" value="Criar Burguer" />
+      <div class="">
+        <input
+          type="submit"
+          name="submit-btn"
+          class="btn mt-10 w-full bg-grennTwo hover:bg-grennOne border-none"
+          value="Criar Burguer"
+        />
       </div>
     </form>
   </div>
@@ -117,63 +144,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-form {
-  max-width: 400px;
-  margin: 0 auto;
-}
-.input-container {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-}
-label {
-  font-weight: bold;
-  margin-bottom: 15px;
-  color: #000;
-  padding: 5px 10px;
-  border-left: 4px solid #fcba03;
-}
-input,
-select {
-  padding: 5px 10px;
-  width: 300px;
-}
-#opcionais-container {
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-#opcionais-title {
-  width: 100%;
-}
-.checkbox-container {
-  display: flex;
-  align-items: flex-start;
-  width: 50%;
-  margin-bottom: 20px;
-}
-.checkbox-container span,
-.checkbox-container input {
-  width: auto;
-}
-.checkbox-container span {
-  margin-left: 6px;
-  font-weight: bold;
-}
-.submit-btn {
-  background-color: #222;
-  color: #fcba03;
-  font-weight: bold;
-  border: 2px solid #222;
-  padding: 10px;
-  font-size: 16px;
-  margin: 0 auto;
-  cursor: pointer;
-  transition: 0.5s;
-}
-.submit-btn:hover {
-  background-color: transparent;
-  color: #fff;
-}
-</style>

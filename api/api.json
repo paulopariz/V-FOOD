@@ -3,25 +3,33 @@
     "paes": [
       {
         "id": 1,
-        "tipo": "Italiano Branco"
+        "tipo": "Pão de Hambúrguer"
       },
       {
         "id": 2,
-        "tipo": "3 Queijos"
+        "tipo": "Pão de Hambúrguer com gergelim"
       },
       {
         "id": 3,
-        "tipo": "Parmesão e Orégano"
+        "tipo": "Pão de Hambúrguer Australiano"
       },
       {
         "id": 4,
-        "tipo": "Integral"
+        "tipo": "Pão de Hambúrguer integral"
+      },
+      {
+        "id": 4,
+        "tipo": "Pão de Hambúrguer Crocante"
+      },
+      {
+        "id": 4,
+        "tipo": "Pão de Brioche"
       }
     ],
     "carnes": [
       {
         "id": 1,
-        "tipo": "Maminha"
+        "tipo": "Acém"
       },
       {
         "id": 2,
@@ -29,17 +37,25 @@
       },
       {
         "id": 3,
-        "tipo": "Picanha"
+        "tipo": "Contrafilé"
       },
       {
         "id": 4,
-        "tipo": "Veggie burger"
+        "tipo": "Fraldinha"
+      },
+      {
+        "id": 5,
+        "tipo": "Patinho"
+      },
+      {
+        "id": 6,
+        "tipo": "Picanha"
       }
     ],
     "opcionais": [
       {
         "id": 1,
-        "tipo": "Bacon"
+        "tipo": "Catupiry"
       },
       {
         "id": 2,
@@ -47,19 +63,43 @@
       },
       {
         "id": 3,
-        "tipo": "Salame"
+        "tipo": "Gorgonzola"
       },
       {
         "id": 4,
+        "tipo": "Ovo"
+      },
+      {
+        "id": 5,
+        "tipo": "Alface"
+      },
+      {
+        "id": 6,
         "tipo": "Tomate"
       },
       {
-        "id": 4,
-        "tipo": "Cebola roxa"
+        "id": 7,
+        "tipo": "Molho Especial"
       },
       {
-        "id": 4,
-        "tipo": "Pepino"
+        "id": 8,
+        "tipo": "Cebola"
+      },
+      {
+        "id": 9,
+        "tipo": "Crispy de Cebola"
+      },
+      {
+        "id": 10,
+        "tipo": "Picles"
+      },
+      {
+        "id": 11,
+        "tipo": "Batata Frita"
+      },
+      {
+        "id": 12,
+        "tipo": "Molho Barbecue"
       }
     ]
   },
@@ -86,15 +126,15 @@
         "Bacon",
         "Pepino"
       ],
-      "status": "Em produção",
+      "status": "Solicitado",
       "id": 3
     },
     {
       "nome": "Paulo",
-      "carne": "Maminha",
-      "pao": "Italiano Branco",
+      "carne": "Fraldinha",
+      "pao": "Pão de Hambúrguer integral",
       "opcionais": [
-        "Bacon"
+        "Tomate"
       ],
       "status": "Solicitado",
       "id": 4

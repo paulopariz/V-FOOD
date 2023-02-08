@@ -52,7 +52,7 @@ export default {
 
   data() {
     return {
-      burgers: null,
+      burgers: [],
       burgers_id: null,
       status: [],
     };

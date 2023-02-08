@@ -16,7 +16,7 @@
         <div
           class="bg-grennOne text-white font-semibold text-xs w-4 h-4 flex items-center justify-center p-2.5 rounded-full -mt-12 ml-28 absolute"
         >
-          2
+          {{ burgers.length }}
         </div>
       </router-link>
     </div>
@@ -29,9 +29,26 @@ export default {
 
   data() {
     return {
+      burgers: [],
       logo: require("../assets/img/logo.svg"),
       cart: require("../assets/img/cart.svg"),
     };
+  },
+
+  methods: {
+    async getPedidos() {
+      const api = await fetch("http://localhost:3000/burgers");
+
+      const data = await api.json();
+
+      this.burgers = data;
+
+      this.getStatus();
+    },
+  },
+
+  mounted() {
+    this.getPedidos();
   },
 };
 </script>
