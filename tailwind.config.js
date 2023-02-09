@@ -16,6 +16,10 @@ module.exports = {
         'darkSecondary': '#242933'
       },
 
+      fontFamily: {
+        flame: ['Flame']
+      },
+
       container: {
         center: true
       }

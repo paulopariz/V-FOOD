@@ -20,7 +20,7 @@
             name="nome"
             class="bg-transparent outline-none p-3 border-b-2 border-b-base-300"
             v-model="sobrenome"
-            placeholder="Digite seu nome"
+            placeholder="Digite seu sobrenome"
           />
         </div>
       </div>

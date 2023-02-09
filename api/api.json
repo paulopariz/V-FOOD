@@ -134,34 +134,6 @@
       ],
       "status": "Solicitado",
       "id": 4
-    },
-    {
-      "nome": "Paulo",
-      "sobrenome": "Pariz",
-      "carne": "Picanha",
-      "pao": "Pão de Hambúrguer integral",
-      "opcionais": [
-        "Ovo",
-        "Alface",
-        "Tomate",
-        "Batata Frita"
-      ],
-      "status": "Solicitado",
-      "id": 5
-    },
-    {
-      "nome": "Paulo",
-      "sobrenome": " Santos Pariz ",
-      "carne": "Contrafilé",
-      "pao": "Pão de Brioche",
-      "opcionais": [
-        "Cebola",
-        "Cheddar",
-        "Alface",
-        "Tomate"
-      ],
-      "status": "Solicitado",
-      "id": 7
     }
   ]
 }

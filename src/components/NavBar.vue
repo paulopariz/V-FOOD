@@ -2,7 +2,7 @@
   <nav class="container py-10 flex items-center justify-between">
     <div class="flex items-center gap-3">
       <img :src="logo" />
-      <h1 class="font-bold">V-FOOD</h1>
+      <h1 class="font-bold font-flame">V-FOOD</h1>
     </div>
     <div class="flex items-center gap-16 font-medium">
       <router-link to="/">Início</router-link>
