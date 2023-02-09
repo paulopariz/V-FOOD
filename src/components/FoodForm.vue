@@ -133,8 +133,6 @@ export default {
   },
 
   methods: {
-    submitform() {},
-
     async getIngredientes() {
       const api = await fetch("http://localhost:3000/ingredientes");
       const data = await api.json();
