@@ -2,7 +2,7 @@
   <div class="container mt-12 grid">
     <div class="">
       <div
-        class="flex items-center gap-14 border-2 mt-8 rounded-3xl"
+        class="flex items-center gap-14 border-none bg-base-200 mt-8 rounded-3xl"
         v-for="burger in burgers"
         :key="burger.id"
       >
@@ -33,7 +33,7 @@
             <div class="dropdown dropdown-right dropdown-end">
               <label
                 tabindex="0"
-                class="btn m-1 btn-sm text-xs bg-grennTwo hover:bg-grennOne"
+                class="btn m-1 btn-sm text-xs bg-grennTwo hover:bg-grennOne border-none"
                 >Opcionais</label
               >
               <ul
@@ -67,8 +67,11 @@
               </option>
             </select>
           </div>
-          <button class="btn w-0 h-full hidden" @click="deleteBurger(burger.id)">
-            Cancelar
+          <button
+            class="h-36 w-20 btn bg-red-700 hover:bg-red-600 border-none float-right flex items-center justify-center ml-48 rounded-3xl rounded-l-none"
+            @click="deleteBurger(burger.id)"
+          >
+            <img src="../assets/img/trash.svg" class="w-5" />
           </button>
         </div>
       </div>

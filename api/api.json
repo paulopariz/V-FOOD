@@ -151,18 +151,6 @@
     },
     {
       "nome": "Paulo",
-      "sobrenome": "Paulo",
-      "carne": "Acém",
-      "pao": "Pão de Brioche",
-      "opcionais": [
-        "Ovo",
-        "Alface"
-      ],
-      "status": "Solicitado",
-      "id": 6
-    },
-    {
-      "nome": "Paulo",
       "sobrenome": " Santos Pariz ",
       "carne": "Contrafilé",
       "pao": "Pão de Brioche",
