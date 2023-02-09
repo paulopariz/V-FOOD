@@ -1,6 +1,6 @@
 <template>
   <div class="container mt-5 mb-20">
-    <form @submit="createFood" class="max-w-3xl m-auto bg-base-200 py-10 px-14">
+    <form class="max-w-3xl m-auto bg-base-200 py-10 px-14">
       <div class="p-2 rounded-3xl flex justify-center flex-col">
         <div class="flex justify-center flex-col">
           <label for="name" class="font-semibold">Nome</label>
@@ -66,18 +66,49 @@
         </div>
       </div>
       <div class="">
-        <input
-          type="submit"
-          name="submit-btn"
-          class="btn mt-10 w-full bg-grennTwo hover:bg-grennOne border-none"
-          value="Criar Burguer"
-        />
+        <label
+          for="my-modal-3"
+          class="btn mt-10 w-full bg-grennTwo hover:bg-grennOne border-none uppercase"
+          >FAZER PEDIDO</label
+        >
+
+        <input type="checkbox" id="my-modal-3" class="modal-toggle" />
+        <div class="modal">
+          <div class="modal-box relative">
+            <label
+              for="my-modal-3"
+              class="btn bg-transparent border-none btn-sm absolute right-2 top-2 text-lg"
+              >✕</label
+            >
+            <h3 class="text-xl font-bold">Confirmar pedido?</h3>
+            <p class="py-4 text-sm">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quis
+              debitis.
+            </p>
+
+            <div class="flex items-center justify-end gap-4">
+              <input
+                type="submit"
+                name="submit-btn"
+                @click="createFood"
+                class="btn mt-5 bg-grennTwo hover:bg-grennOne border-none uppercase text-xs"
+                value="Sim, confirmar!"
+              />
+              <label
+                for="my-modal-3"
+                class="btn mt-5 bg-red-700 hover:bg-red-600 border-none uppercase text-xs"
+                >Não, cancelar!</label
+              >
+            </div>
+          </div>
+        </div>
       </div>
     </form>
   </div>
 </template>
 
 <script>
+import router from "@/router";
 export default {
   name: "FoodForm",
 
@@ -102,6 +133,8 @@ export default {
   },
 
   methods: {
+    submitform() {},
+
     async getIngredientes() {
       const api = await fetch("http://localhost:3000/ingredientes");
       const data = await api.json();
@@ -113,6 +146,25 @@ export default {
 
     async createFood(e) {
       e.preventDefault();
+
+      const Toast = this.$swal.mixin({
+        position: "center",
+        showConfirmButton: false,
+        timer: 3000,
+        background: "#000",
+        iconColor: "#337d26",
+        color: "#fff",
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener("mouseenter", this.$swal.stopTimer);
+          toast.addEventListener("mouseleave", this.$swal.resumeTimer);
+        },
+      });
+
+      Toast.fire({
+        icon: "success",
+        title: "Pedido Confirmado!",
+      });
 
       const data = {
         nome: this.nome,
@@ -140,6 +192,13 @@ export default {
         (this.carne = ""),
         (this.pao = ""),
         (this.opcionais = "");
+
+      setTimeout(() => {
+        router.push("/pedidos");
+        setTimeout(() => {
+          document.location.reload(true);
+        }, 100);
+      }, 3000);
     },
   },
 

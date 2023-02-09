@@ -50,23 +50,7 @@
               </ul>
             </div>
           </div>
-          <div>
-            <select
-              name="status"
-              class="status text-black hidden"
-              @change="updatedBurger($event, burger.id)"
-            >
-              <option value="">Selecione o status</option>
-              <option
-                v-for="s in status"
-                :key="s.id"
-                :value="s.tipo"
-                :selected="burger.status == s.tipo"
-              >
-                {{ s.tipo }}
-              </option>
-            </select>
-          </div>
+          <div></div>
           <button
             class="h-36 w-20 btn bg-red-700 hover:bg-red-600 border-none float-right flex items-center justify-center ml-48 rounded-3xl rounded-l-none"
             @click="deleteBurger(burger.id)"
@@ -87,7 +71,6 @@ export default {
     return {
       burgers: [],
       burgers_id: null,
-      status: [],
     };
   },
 
@@ -120,22 +103,6 @@ export default {
       console.log(res);
 
       this.getPedidos();
-    },
-
-    async updatedBurger(event, id) {
-      const option = event.target.value;
-
-      const dataJson = JSON.stringify({ status: option });
-
-      const api = await fetch(`http://localhost:3000/burgers/${id}`, {
-        method: "PATCH",
-        headers: { "Content-Type": "application/json" },
-        body: dataJson,
-      });
-
-      const res = await api.json();
-
-      console.log(res);
     },
   },
 

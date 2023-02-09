@@ -20,4 +20,8 @@ body {
   color: #fff;
   font-family: "Montserrat", sans-serif;
 }
+
+*::-webkit-scrollbar {
+  width: 0px;
+}
 </style>
