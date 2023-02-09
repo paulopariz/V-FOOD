@@ -113,33 +113,5 @@
       "tipo": "Finalizado"
     }
   ],
-  "burgers": [
-    {
-      "nome": null,
-      "sobrenome": null,
-      "carne": null,
-      "pao": null,
-      "opcionais": [],
-      "status": "Solicitado",
-      "id": 4
-    },
-    {
-      "nome": null,
-      "sobrenome": null,
-      "carne": null,
-      "pao": null,
-      "opcionais": [],
-      "status": "Solicitado",
-      "id": 5
-    },
-    {
-      "nome": null,
-      "sobrenome": null,
-      "carne": null,
-      "pao": null,
-      "opcionais": [],
-      "status": "Solicitado",
-      "id": 6
-    }
-  ]
+  "burgers": []
 }

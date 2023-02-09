@@ -1,5 +1,5 @@
 <template>
-  <div class="container mt-12 grid">
+  <div class="container mt-12 grid" v-if="burgers.length">
     <div class="">
       <div
         class="flex items-center gap-14 border-none bg-base-200 mt-8 rounded-3xl"
@@ -99,10 +99,15 @@
       </div>
     </div>
   </div>
+
+  <FoodEmpty v-else />
 </template>
 
 <script>
+import FoodEmpty from "./FoodEmpty.vue";
+
 export default {
+  components: { FoodEmpty },
   name: "FoodDashboard",
 
   data() {
