@@ -22,14 +22,14 @@
       </router-link>
     </div>
 
-    <div class="dropdown dropdown-end hidden max-md:block">
+    <div class="dropdown dropdown-end hidden max-md:block bg-transparent">
       <label
         tabindex="0"
-        class="btn border-none bg-transparent focus:bg-transparent p-0"
+        class="border-none bg-black focus:bg-transparent p-0"
         @click="openMenu"
       >
         <svg
-          class="swap-off fill-current"
+          class="swap-off fill-current bg-transparent"
           xmlns="http://www.w3.org/2000/svg"
           width="32"
           height="32"

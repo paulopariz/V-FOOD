@@ -1,39 +1,44 @@
 <template>
   <div class="container mt-12 grid" v-if="burgers.length">
-    <div class="">
+    <div class="max-lg:grid max-lg:grid-cols-2 max-lg:gap-x-5 max-sm:grid-cols-1">
       <div
-        class="flex items-center gap-14 border-none bg-base-200 mt-8 rounded-3xl"
+        class="flex items-center justify-between gap-14 border-none bg-base-200 mt-8 rounded-3xl max-xl:gap-6 max-lg:grid max-lg:grid-cols-1"
         v-for="burger in burgers"
         :key="burger.id"
       >
-        <div>
-          <img class="w-36 bg-grennTwo rounded-3xl" src="../assets/img/Balloon.svg" />
+        <div class="bg-grennTwo rounded-l-3xl max-lg:rounded-3xl max-lg:rounded-b-none">
+          <img
+            class="w-36 rounded-3xl max-lg:w-40 max-lg:m-auto max-lg:rounded-b-none"
+            src="../assets/img/Balloon.svg"
+          />
         </div>
 
         <span
-          class="bg-grennOne text-white text-xs font-semibold border-2 border-grennThree p-1 w-6 h-6 flex items-center justify-center rounded-full"
+          class="bg-grennOne text-white text-xs font-semibold border-2 border-grennThree p-1 w-6 h-6 flex items-center justify-center rounded-full max-lg:ml-8"
           >{{ burger.id }}</span
         >
 
-        <div class="flex justify-between items-center gap-14">
-          <div class="w-44">
+        <div
+          class="flex justify-between items-center gap-1 max-lg:grid max-lg:grid-cols-2 max-lg:gap-y-7 max-lg:place-items-center"
+        >
+          <div class="w-44 max-lg:w-28">
             <span class="font-semibold">Nome: </span>
             <h1 class="text-sm">{{ burger.nome }} {{ burger.sobrenome }}</h1>
           </div>
 
-          <div class="w-44">
+          <div class="w-44 max-lg:w-28">
             <span class="font-semibold">Pão: </span>
             <h1 class="text-sm">{{ burger.pao }}</h1>
           </div>
-          <div class="w-44">
+          <div class="w-44 max-lg:w-28">
             <span class="font-semibold">Carne: </span>
             <h1 class="text-sm">{{ burger.carne }}</h1>
           </div>
-          <div class="w-44">
-            <div class="dropdown dropdown-right dropdown-end">
+          <div class="w-44 max-lg:w-28">
+            <div class="dropdown dropdown-top dropdown-end">
               <label
                 tabindex="0"
-                class="btn m-1 text-sm bg-grennTwo hover:bg-grennOne border-none normal-case"
+                class="btn m-1 btn-sm text-sm bg-grennTwo hover:bg-grennOne border-none"
                 >Opcionais</label
               >
               <ul
@@ -52,41 +57,40 @@
           </div>
 
           <div></div>
+        </div>
+        <label
+          for="my-modal-3"
+          class="h-36 w-20 btn bg-red-700 hover:bg-red-600 border-none float-right flex items-center justify-center rounded-3xl rounded-l-none max-lg:w-full max-lg:rounded-none max-lg:h-6 max-lg:rounded-b-3xl"
+        >
+          <img src="../assets/img/trash.svg" class="w-5" />
+        </label>
 
-          <label
-            for="my-modal-3"
-            class="h-36 w-20 btn bg-red-700 hover:bg-red-600 border-none float-right flex items-center justify-center ml-48 rounded-3xl rounded-l-none"
-          >
-            <img src="../assets/img/trash.svg" class="w-5" />
-          </label>
+        <input type="checkbox" id="my-modal-3" class="modal-toggle" />
+        <div class="modal">
+          <div class="modal-box relative">
+            <label
+              for="my-modal-3"
+              class="btn bg-transparent border-none btn-sm absolute right-2 top-2 text-lg"
+              >✕</label
+            >
+            <h3 class="text-xl font-bold">Cancelar pedido?</h3>
+            <p class="py-4 text-sm">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quis
+              debitis.
+            </p>
 
-          <input type="checkbox" id="my-modal-3" class="modal-toggle" />
-          <div class="modal">
-            <div class="modal-box relative">
+            <div class="flex items-center justify-end gap-4">
+              <button
+                @click="deleteBurger(burger.id)"
+                class="btn mt-5 bg-grennTwo hover:bg-grennOne border-none uppercase text-xs"
+              >
+                Sim
+              </button>
               <label
                 for="my-modal-3"
-                class="btn bg-transparent border-none btn-sm absolute right-2 top-2 text-lg"
-                >✕</label
+                class="btn mt-5 bg-red-700 hover:bg-red-600 border-none uppercase text-xs"
+                >Não</label
               >
-              <h3 class="text-xl font-bold">Cancelar pedido?</h3>
-              <p class="py-4 text-sm">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quis
-                debitis.
-              </p>
-
-              <div class="flex items-center justify-end gap-4">
-                <button
-                  @click="deleteBurger(burger.id)"
-                  class="btn mt-5 bg-grennTwo hover:bg-grennOne border-none uppercase text-xs"
-                >
-                  Sim
-                </button>
-                <label
-                  for="my-modal-3"
-                  class="btn mt-5 bg-red-700 hover:bg-red-600 border-none uppercase text-xs"
-                  >Não</label
-                >
-              </div>
             </div>
           </div>
         </div>
