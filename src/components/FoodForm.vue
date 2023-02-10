@@ -1,13 +1,13 @@
 <template>
   <div class="container mt-5 mb-20">
-    <form class="max-w-3xl m-auto bg-base-200 py-10 px-14">
+    <form class="max-w-3xl m-auto bg-base-200 py-10 px-14 max-sm:px-3">
       <div class="p-2 rounded-3xl flex justify-center flex-col">
         <div class="flex justify-center flex-col">
-          <label for="name" class="font-semibold">Nome</label>
+          <label for="name" class="font-semibold max-sm:text-sm">Nome</label>
           <input
             type="text"
             name="nome"
-            class="bg-transparent outline-none p-3 border-b-2 border-b-base-300"
+            class="bg-transparent outline-none p-3 border-b-2 border-b-base-300 max-sm:text-sm"
             v-model="nome"
             placeholder="Digite seu nome"
             required
@@ -15,11 +15,11 @@
         </div>
 
         <div class="flex justify-center flex-col mt-6">
-          <label for="name" class="font-semibold">Sobrenome</label>
+          <label for="name" class="font-semibold max-sm:text-sm">Sobrenome</label>
           <input
             type="text"
             name="nome"
-            class="bg-transparent outline-none p-3 border-b-2 border-b-base-300"
+            class="bg-transparent outline-none p-3 border-b-2 border-b-base-300 max-sm:text-sm"
             v-model="sobrenome"
             placeholder="Digite seu sobrenome"
             required
@@ -27,7 +27,7 @@
         </div>
       </div>
       <div class="p-2 rounded-3xl flex justify-center flex-col mt-4">
-        <label for="pao" class="font-semibold mb-2">Pão:</label>
+        <label for="pao" class="font-semibold mb-2 max-sm:text-sm">Pão:</label>
         <select name="pao" class="select w-full" v-model="pao">
           <option disabled selected>Selecione o tipo de pão</option>
           <option v-for="pao in paes" :key="pao.id" :value="pao.tipo">
@@ -36,7 +36,7 @@
         </select>
       </div>
       <div class="p-2 rounded-3xl flex justify-center flex-col mt-4">
-        <label for="carne" class="font-semibold mb-2">Carne:</label>
+        <label for="carne" class="font-semibold mb-2 max-sm:text-sm">Carne:</label>
         <select name="carne" class="select w-full" v-model="carne">
           <option disabled selected>Selecione sua carne</option>
           <option v-for="carne in carnes" :key="carne.id" :value="carne.tipo">
@@ -49,7 +49,7 @@
         class="p-2 rounded-3xl flex justify-center flex-col mt-2"
       >
         <label for="opcionais" class="font-semibold mb-2">Opcionais:</label>
-        <div class="grid grid-cols-3 gap-8">
+        <div class="grid grid-cols-3 gap-8 max-sm:grid-cols-2">
           <div
             class="flex items-center gap-3"
             v-for="opcional in opcionaisdata"
@@ -71,7 +71,7 @@
       <div class="">
         <label
           for="my-modal-3"
-          class="btn mt-10 w-full bg-grennTwo hover:bg-grennOne border-none uppercase"
+          class="btn mt-10 w-full bg-grennTwo hover:bg-grennOne border-none uppercase max-sm:text-sm"
           >FAZER PEDIDO</label
         >
 

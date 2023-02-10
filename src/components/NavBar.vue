@@ -25,7 +25,7 @@
     <div class="dropdown dropdown-end hidden max-md:block">
       <label
         tabindex="0"
-        class="btn border-none bg-transparent focus:bg-transparent"
+        class="btn border-none bg-transparent focus:bg-transparent p-0"
         @click="openMenu"
       >
         <svg
