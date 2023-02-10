@@ -115,32 +115,18 @@
   ],
   "burgers": [
     {
-      "nome": null,
-      "sobrenome": "f",
-      "carne": null,
-      "pao": null,
-      "opcionais": [],
-      "id": 12
-    },
-    {
       "nome": "Paulo",
       "sobrenome": "Pariz",
-      "carne": "Contrafilé",
-      "pao": "Pão com gergelim",
+      "carne": "Picanha",
+      "pao": "Pão de Brioche",
       "opcionais": [
-        "Ovo",
         "Alface",
-        "Tomate"
+        "Tomate",
+        "Cebola",
+        "Molho Barbecue",
+        "Batata Frita"
       ],
-      "id": 13
-    },
-    {
-      "nome": null,
-      "sobrenome": "d",
-      "carne": null,
-      "pao": null,
-      "opcionais": [],
-      "id": 14
+      "id": 1
     }
   ]
 }

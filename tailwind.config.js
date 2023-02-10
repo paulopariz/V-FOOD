@@ -5,7 +5,17 @@ module.exports = {
     "./src/**/*.{html,js,vue}"
   ],
   theme: {
+    
     extend: {
+      screens: {
+        mn: '375px',
+        sm: '642px',
+        md: '770px' ,
+        lg: '1026px' ,
+        xl: '1282px' ,
+        '2xl': '1537px'    
+    },
+
       colors: {
         'grennOne': '#337d26',
         'grennTwo': '#266a1d',

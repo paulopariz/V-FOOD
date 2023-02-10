@@ -33,7 +33,7 @@
             <div class="dropdown dropdown-right dropdown-end">
               <label
                 tabindex="0"
-                class="btn m-1 rounded-md text-sm bg-grennTwo hover:bg-grennOne border-none normal-case"
+                class="btn m-1 text-sm bg-grennTwo hover:bg-grennOne border-none normal-case"
                 >Opcionais</label
               >
               <ul
