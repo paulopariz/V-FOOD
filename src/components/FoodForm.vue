@@ -10,6 +10,7 @@
             class="bg-transparent outline-none p-3 border-b-2 border-b-base-300"
             v-model="nome"
             placeholder="Digite seu nome"
+            required
           />
         </div>
 
@@ -21,6 +22,7 @@
             class="bg-transparent outline-none p-3 border-b-2 border-b-base-300"
             v-model="sobrenome"
             placeholder="Digite seu sobrenome"
+            required
           />
         </div>
       </div>
@@ -60,6 +62,7 @@
               class="checkbox"
               v-model="opcionais"
               :value="opcional.tipo"
+              required
             />
             <span class="text-sm">{{ opcional.tipo }}</span>
           </div>
@@ -145,6 +148,10 @@ export default {
     async createFood(e) {
       e.preventDefault();
 
+      if (this.nome < 3 && this.sobrenome < 3) {
+        return false;
+      }
+
       const Toast = this.$swal.mixin({
         position: "center",
         showConfirmButton: false,
@@ -170,7 +177,6 @@ export default {
         carne: this.carne,
         pao: this.pao,
         opcionais: Array.from(this.opcionais),
-        status: "Solicitado",
       };
 
       const dataJson = JSON.stringify(data);

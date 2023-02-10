@@ -18,7 +18,7 @@ export default {
 <style>
 body {
   color: #fff;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 *::-webkit-scrollbar {

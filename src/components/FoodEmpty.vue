@@ -12,7 +12,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: "FoodEmpty",
+};
 </script>
 
 <style></style>

@@ -4,14 +4,17 @@
       class="w-full h-80 bg-grennTwo rounded-3xl relative flex justify-between items-center"
     >
       <div class="pl-16 w-5/12">
-        <span
-          class="text-7xl left-1/2 -translate-x-1/2 -translate-y-1/2 font-semibold font-flame"
-          >V-FOOD</span
-        >
-        <p class="mt-4 tracking-wide">
+        <p class="mt-4 tracking-widest leading-8 text-lg">
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatum, quidem
           dolore reiciendis eaque cumque, ut ullam laudantium quia.
         </p>
+
+        <router-link
+          to="/fazer-pedido"
+          class="btn mt-10 w-56 bg-white text-grennTwo rounded-3xl hover:bg-gray-200 border-none uppercase"
+        >
+          Fazer Pedido
+        </router-link>
       </div>
 
       <div class="">

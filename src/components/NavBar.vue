@@ -14,6 +14,7 @@
       >
         <span>Meus Pedidos</span>
         <div
+          v-if="burgers.length"
           class="bg-grennOne text-white font-semibold text-xs w-4 h-4 flex items-center justify-center p-2.5 rounded-full -mt-12 ml-28 absolute"
         >
           {{ burgers.length }}
@@ -31,7 +32,6 @@ export default {
     return {
       burgers: [],
       logo: require("../assets/img/logo.svg"),
-      cart: require("../assets/img/cart.svg"),
     };
   },
 
@@ -42,8 +42,6 @@ export default {
       const data = await api.json();
 
       this.burgers = data;
-
-      this.getStatus();
     },
   },
 

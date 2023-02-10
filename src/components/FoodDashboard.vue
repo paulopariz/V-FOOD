@@ -33,7 +33,7 @@
             <div class="dropdown dropdown-right dropdown-end">
               <label
                 tabindex="0"
-                class="btn m-1 btn-sm text-xs bg-grennTwo hover:bg-grennOne border-none"
+                class="btn m-1 rounded-md text-sm bg-grennTwo hover:bg-grennOne border-none normal-case"
                 >Opcionais</label
               >
               <ul
@@ -43,21 +43,15 @@
                 <li
                   v-for="(opcional, index) in burger.opcionais"
                   :key="index"
-                  class="font-semibold p-1"
+                  class="font-semibold p-1 text-xs"
                 >
                   {{ opcional }}
                 </li>
               </ul>
             </div>
           </div>
-          <div></div>
 
-          <button
-            class="h-36 w-20 btn bg-red-700 hover:bg-red-600 border-none float-right flex items-center justify-center ml-48 rounded-3xl rounded-l-none hidden"
-            @click="deleteBurger(burger.id)"
-          >
-            <img src="../assets/img/trash.svg" class="w-5" />
-          </button>
+          <div></div>
 
           <label
             for="my-modal-3"
@@ -124,16 +118,6 @@ export default {
       const data = await api.json();
 
       this.burgers = data;
-
-      this.getStatus();
-    },
-
-    async getStatus() {
-      const api = await fetch("http://localhost:3000/status");
-
-      const data = await api.json();
-
-      this.status = data;
     },
 
     async deleteBurger(id) {
