@@ -99,45 +99,32 @@
       }
     ]
   },
-  "status": [
-    {
-      "id": 1,
-      "tipo": "Solicitado"
-    },
-    {
-      "id": 2,
-      "tipo": "Em produção"
-    },
-    {
-      "id": 3,
-      "tipo": "Finalizado"
-    }
-  ],
   "burgers": [
     {
       "nome": "Paulo",
       "sobrenome": "Pariz",
-      "carne": "Acém",
-      "pao": "Pão Australiano",
+      "carne": "Contrafilé",
+      "pao": "Pão com gergelim",
       "opcionais": [
         "Ovo",
-        "Cebola",
+        "Alface",
+        "Tomate",
         "Batata Frita"
       ],
-      "id": 4
+      "id": 1
     },
     {
       "nome": "Paulo",
-      "sobrenome": "Santos",
+      "sobrenome": "Vinícius",
       "carne": "Alcatra",
-      "pao": "Pão integral",
+      "pao": "Pão Crocante",
       "opcionais": [
-        "Molho Barbecue",
         "Crispy de Cebola",
-        "Gorgonzola",
-        "Picles"
+        "Molho Barbecue",
+        "Picles",
+        "Ovo"
       ],
-      "id": 5
+      "id": 2
     }
   ]
 }

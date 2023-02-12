@@ -2,7 +2,7 @@
   <div class="container mt-12 grid" v-if="burgers.length">
     <div class="max-lg:grid max-lg:grid-cols-2 max-lg:gap-x-5 max-sm:grid-cols-1">
       <div
-        class="flex items-center justify-between gap-14 border-none bg-base-200 mt-8 rounded-3xl max-xl:gap-6 max-lg:grid max-lg:grid-cols-1"
+        class="flex items-center justify-between gap-14 border-none bg-base-200 mb-8 rounded-3xl max-xl:gap-6 max-lg:grid max-lg:grid-cols-1"
         v-for="burger in burgers"
         :key="burger.id"
       >
