@@ -46,7 +46,7 @@ https://user-images.githubusercontent.com/111146928/218291410-fa9c7749-7be1-4ca3
 <br>
 
 ### 📍 DEPLOY apenas front-end*:
-- <a href="">CLIQUE AQUI PARA VER O PROJETO</a>
+- <a href="https://v-foodd.vercel.app/">CLIQUE AQUI PARA VER O PROJETO</a>
 
 <br>
 
