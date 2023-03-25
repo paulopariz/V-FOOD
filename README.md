@@ -2,7 +2,7 @@
 
 <br>
 
-<p align="center">V-FOOD, no sistema você pode realizar um pedido de lanche, e poder cancelar o pedido. Json Server como servidor do sistema e VueJs como a interface. </p>
+<p align="center">V-FOOD é um sistema que permite que você faça pedidos de lanches e cancele-os com facilidade. O servidor do sistema é o Json Server e a interface é baseada em VueJs.</p>
 
 <br>
 
